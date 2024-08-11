@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.title-font {
+  font-family: 'Lobster', cursive;
+}
+
+.nav-item {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  line-height: 64px; /* Match the navbar height */
+}
+
+.nav-item:hover {
+  color: #006aa2; /* Change text color on hover */
+  text-shadow: 0 0 8px #006aa2; /* Add glowing effect */
+}
+
+.menu-item {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  display: block;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  padding: 0.75rem 1rem; /* Adjust padding */
+  border-bottom: none; /* Add border */
+}
+
+.menu-item:hover {
+  color: #006aa2; /* Change text color on hover */
+  text-shadow: 0 0 8px #006aa2; /* Add glowing effect */
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%; /* Adjusts the container width for mobile view */
+  }
+
+  .menu-item:hover {
+    color: #006aa2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 106, 162);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .menu-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+nav {
+  height: 64px; /* Set a fixed height for the navbar */
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 64px; /* Place it below the navbar */
+  right: 1rem; /* Position it at the right side */
+  width: 200px; /* Adjust width for mobile view */
+  background-color: #083c5e; /* Match the navbar background */
+  padding: 0.5rem 0; /* Add padding */
+  border-radius: 8px;
+  border: 2px solid #0f52ba;
+}
+

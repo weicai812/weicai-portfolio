@@ -1,0 +1,30 @@
+.footer {
+  background-color:rgb(8 51 68);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text {
+  margin: 0;
+}
+
+.nav {
+  margin-top: 5px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
