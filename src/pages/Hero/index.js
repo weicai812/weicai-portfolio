@@ -7,7 +7,7 @@ import { faPhone, faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Ovo } from 'next/font/google';
 import backgroundImage from '../../assets/blue-calc.jpg';
-import styles from './hero.module.css';
+import styles from '../Hero/Hero.module.css';
 
 // Apply the font to your component
 const ovo = Ovo({
