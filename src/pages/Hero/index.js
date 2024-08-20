@@ -152,7 +152,7 @@ export default function Hero() {
                 <span className="text-gray-400">{'('}</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-[5rem] mr-2 text-cyan-400">"Absolutely"</span>
+                <span className="ml-12 lg:ml-[5rem] mr-2 text-cyan-400">Absolutely</span>
                 <span className="text-gray-400">{')'}</span>
               </div>
               <div>

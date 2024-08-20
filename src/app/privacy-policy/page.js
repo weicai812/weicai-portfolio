@@ -18,7 +18,7 @@ export default function Privacy() {
                     1. Introduction
                 </h2>
                 <p className='px-4 py-2 bg-gray-200'>
-                Welcome to [Gan Wei Cai | Portfolio] ("we," "our," "us"). We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our website and/or mobile application (the "Services").
+                Welcome to Gan Wei Cai | Portfolio. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our website and/or mobile application.
                 </p>
                 <h2 className='text-lg md:text-2xl pt-4 font-bold'>
                     2. Information We Collect
@@ -77,7 +77,7 @@ export default function Privacy() {
                 </h2>
                 <div className='px-4 py-2 bg-gray-200'>
                 <p>
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website and updating the "Last Updated Date" at the bottom of this document. We encourage you to review this Privacy Policy periodically for any changes.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on our website and updating the Last Updated Date at the bottom of this document. We encourage you to review this Privacy Policy periodically for any changes.
                 </p>
                 </div>
                 <h2 className='text-lg md:text-2xl pt-4 font-bold'>

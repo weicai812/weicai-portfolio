@@ -18,7 +18,7 @@ export default function Disclaimer() {
                 1. General Information
                 </h2>
                 <p className='px-4 py-2 bg-gray-200'>
-                The information provided on [Gan Wei Cai | Portfolio] (the "Site") is for general informational purposes only. All content on the Site is provided in good faith, and we strive to ensure that the information is accurate and up-to-date. However, we make no warranties or representations of any kind regarding the accuracy, completeness, or reliability of any information on the Site.
+                The information provided on Gan Wei Cai | Portfolio is for general informational purposes only. All content on the Site is provided in good faith, and we strive to ensure that the information is accurate and up-to-date. However, we make no warranties or representations of any kind regarding the accuracy, completeness, or reliability of any information on the Site.
                 </p>
                 <h2 className='text-lg md:text-2xl pt-4 font-bold'>
                 2. No Professional Advice
