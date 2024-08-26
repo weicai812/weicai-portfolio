@@ -51,13 +51,13 @@ export default function Hero() {
 
           {/* Buttons with call icons and tel links */}
           <div className="flex mt-4 space-x-4">
-            <a href="tel:+6596458117" className="flex items-center px-4 py-2 bg-cyan-900 rounded-md shadow hover:bg-cyan-950 text-white">
+            <a href="tel:+6596458117" className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <span>Call Me</span>
+              <span className='px-4'>Call Me</span>
             </a>
-            <a href="/resume" className="flex items-center px-4 py-2 bg-cyan-900 rounded-md shadow hover:bg-cyan-950 text-white" rel="noopener noreferrer">
+            <a href="/resume" className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFileAlt} className="mr-2" />
-              <span>Resume</span>
+              <span className='px-4'>Resume</span>
             </a>
           </div>
 
@@ -152,7 +152,7 @@ export default function Hero() {
                 <span className="text-gray-400">{'('}</span>
               </div>
               <div>
-                <span className="ml-12 lg:ml-[5rem] mr-2 text-cyan-400">Absolutely</span>
+                <span className="ml-12 lg:ml-[5rem] mr-2 text-cyan-400">{'"'}Absolutely{'"'}</span>
                 <span className="text-gray-400">{')'}</span>
               </div>
               <div>
