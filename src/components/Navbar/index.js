@@ -92,45 +92,47 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="mobile-menu absolute right-0 top-16 bg-cyan-950 w-64 rounded-lg border-2 border-blue-500">
-          <div className="flex flex-col items-start w-full">
-            <button
-              className="menu-item text-white text-sm px-4 py-2 block flex items-center"
-              aria-label="Toggle About dropdown"
-              onClick={toggleAboutDropdown}
-            >
-              About
-              <svg
-                className="ml-1 w-4 h-4 transition-transform duration-200"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-            {isAboutOpen && (
-              <div className="pl-4">
-                <a href="/about#education" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Education</a>
-                <a href="/about#experiences" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Experiences</a>
-                <a href="/about#certificate" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Certificate</a>
-                <a href="/about#activities" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Activities</a>
-              </div>
-            )}
-            <a href="/projects" className="menu-item text-white text-sm px-4 py-2 block">Projects</a>
-            <a href="/blogs" className="menu-item text-white text-sm px-4 py-2 block">Blogs</a>
-            <a href="/contact" className="menu-item text-white text-sm px-4 py-2 block">Contact</a>
-          </div>
+{/* Mobile Menu */}
+{isMenuOpen && (
+  <div className="mobile-menu absolute right-0 top-16 bg-cyan-950 w-64 rounded-lg border-2 border-blue-500">
+    <div className="flex flex-col items-start w-full">
+      <button
+        className="menu-item text-white text-sm px-4 py-2 block flex items-center"
+        aria-label="Toggle About dropdown"
+        onClick={toggleAboutDropdown}
+      >
+        About
+        <svg
+          className={`ml-1 w-4 h-4 transition-transform duration-200 transform ${isAboutOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </button>
+      {isAboutOpen && (
+        <div className="pl-4">
+          <a href="/about#introduction" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Introduction</a>
+          <a href="/about#education" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Education</a>
+          <a href="/about#experiences" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Experiences</a>
+          <a href="/about#certificate" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Certificate</a>
+          <a href="/about#activities" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Activities</a>
         </div>
       )}
+      <a href="/projects" className="menu-item text-white text-sm px-4 py-2 block">Projects</a>
+      <a href="/blogs" className="menu-item text-white text-sm px-4 py-2 block">Blogs</a>
+      <a href="/contact" className="menu-item text-white text-sm px-4 py-2 block">Contact</a>
+    </div>
+  </div>
+)}
+
     </nav>
   );
 }
