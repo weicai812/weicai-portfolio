@@ -176,7 +176,7 @@ export default function Hero() {
             <h2 className="text-5xl font-bold text-emerald-400 mb-6 underline">Overview.</h2>
           </div>
           <p className="text-white text-base md:text-lg mt-4">
-          I am Gan Wei Cai, a dedicated and skilled professional with expertise in Data Science, Software Engineering, and Web Development. With a passion for leveraging data to drive meaningful insights and develop innovative solutions, I am committed to making a significant impact in every project I undertake.
+            I am Gan Wei Cai, a dedicated and skilled professional with expertise in Data Science, Software Engineering, and Web Development. With a passion for leveraging data to drive meaningful insights and develop innovative solutions, I am committed to making a significant impact in every project I undertake.
           </p>
           <p className="text-white text-base md:text-lg mt-4">
             My diverse skill set encompasses programming languages such as Java, Python, and R, along with proficiency in web development technologies like ReactJS and NextJS. Additionally, I have experience with database management tools like MySQL and phpMyAdmin, as well as data visualization using Power BI.

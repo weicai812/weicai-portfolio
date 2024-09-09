@@ -81,7 +81,7 @@ export default function Navbar() {
               <div className="absolute mt-2 bg-cyan-950 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                 <a href="/about#education" className="dropdown-item text-white px-4 py-2 block hover:bg-cyan-800">Education</a>
                 <a href="/about#experiences" className="dropdown-item text-white px-4 py-2 block hover:bg-cyan-800">Experiences</a>
-                <a href="/about#certificate" className="dropdown-item text-white px-4 py-2 block hover:bg-cyan-800">Certificate</a>
+                <a href="/about#certificates" className="dropdown-item text-white px-4 py-2 block hover:bg-cyan-800">Certificates</a>
                 <a href="/about#activities" className="dropdown-item text-white px-4 py-2 block hover:bg-cyan-800">Activities</a>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function Navbar() {
           <a href="/about#introduction" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Introduction</a>
           <a href="/about#education" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Education</a>
           <a href="/about#experiences" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Experiences</a>
-          <a href="/about#certificate" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Certificate</a>
+          <a href="/about#certificates" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Certificates</a>
           <a href="/about#activities" className="dropdown-item text-white text-sm px-4 py-2 block hover:bg-cyan-800">Activities</a>
         </div>
       )}
