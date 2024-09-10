@@ -1,11 +1,8 @@
 import Introduction from '../../components/introduction';
 
 export default function About() {
-    return <div className="text-white lg:gap-12 gap-y-8 z-10 py-28">
+    return <div className="text-white">
       <div id="introduction">
-        <h1>
-          About Page
-        </h1>
         <Introduction />
       </div>
       <div id="education">
