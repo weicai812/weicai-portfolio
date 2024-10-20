@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { Suspense, useEffect, useState, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
@@ -26,7 +26,7 @@ const Computer1 = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.75}
-        position={isMobile ? [0, 0.5, 0] : [0, -1.25, -1.5]}
+        position={isMobile ? [0, -1.25, 0] : [0, -1.25, -1.5]} // Fine-tuned Y position for mobile
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -45,7 +45,7 @@ const Computer2 = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.12 : 0.12}
-        position={isMobile ? [0, 0.5, 0] : [0, -1.25, -1.5]}
+        position={isMobile ? [0, 0.1, 0] : [0, -1.25, -1.5]} // Fine-tuned Y position for mobile
         rotation={[0, 1.3, 0]}
       />
     </mesh>

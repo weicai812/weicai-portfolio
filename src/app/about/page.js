@@ -9,6 +9,24 @@ export default function About() {
         <h1>
           About Page
         </h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
+        <h1>Testing Section</h1>
       </div>
       <div id="experiences">
         <h1>
