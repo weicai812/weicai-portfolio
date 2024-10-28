@@ -33,25 +33,6 @@ const Computer1 = ({ isMobile }) => {
   );
 };
 
-const Computer2 = ({ isMobile }) => {
-  // Import scene
-  const computer = useGLTF("./desktop-pc2/scene.gltf");
-
-  return (
-    // Mesh
-    <mesh>
-      {/* Lights */}
-      <hemisphereLight intensity={3} groundColor="black" />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.12 : 0.12}
-        position={isMobile ? [0, 0.1, 0] : [0, -1.25, -1.5]} // Fine-tuned Y position for mobile
-        rotation={[0, 1.3, 0]}
-      />
-    </mesh>
-  );
-};
-
 // Computer Canvas
 const ComputerCanvas = () => {
   // state to check mobile
