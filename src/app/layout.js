@@ -23,9 +23,11 @@ export default function RootLayout({ children }) {
         {/* Include any other metadata or stylesheets here */}
       </Head>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <div className="page-container">
+          <Navbar />
+          <main className="main-content">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

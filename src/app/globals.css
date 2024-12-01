@@ -6,7 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 7, 89, 133;
   --background-end-rgb: 0, 0, 0;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,7 +13,6 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 7, 89, 133;
     --background-end-rgb: 0, 0, 0;
-    
   }
 }
 
@@ -40,6 +38,19 @@ body, html {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the page container spans the full height of the viewport */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+.main-content {
+  flex: 1; /* Pushes the footer to the bottom */
 }
 
 /* Custom Scroll Bar */
@@ -51,19 +62,18 @@ body, html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #051016; 
-
+  background: #051016;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #164E63; 
+  background: #164E63;
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #a6b2c3; 
+  background: #a6b2c3;
 }
 
 .black-gradient {

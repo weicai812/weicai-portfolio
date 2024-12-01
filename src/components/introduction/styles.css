@@ -1,0 +1,67 @@
+/* Ensure the particles container covers the whole screen */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Make sure it stays behind other content */
+  }
+  
+  /* Particle styling */
+  .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.3); /* Increased opacity for particles */
+    border-radius: 50%;
+    pointer-events: none; /* Ensure particles don’t block interactions */
+    transition: all 3s ease; /* Smooth transition for particle movements */
+  }
+  
+  /* Line linking particles */
+  .line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6); /* Line opacity */
+    pointer-events: none;
+    border-radius: 0px; /* Add slight border-radius to lines for smoothness */
+    z-index: 1;
+  }
+  
+  /* Content styling */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .content button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .content button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  
