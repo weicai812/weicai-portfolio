@@ -1,7 +1,7 @@
 const particlesConfig = {
   particles: {
     number: {
-      value: 50, // Reduce the number of particles for testing
+      value: 200, // Reduce the number of particles for testing
     },
     shape: {
       type: "circle",
