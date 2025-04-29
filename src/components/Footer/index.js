@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <p className={styles.text}>© {new Date().getFullYear()} Gan Wei Cai. All rights reserved.</p>
+        <p className={styles.text}>©{new Date().getFullYear()} Gan Wei Cai. All rights reserved.</p>
         <div className={styles.links}>
           <a href="/privacy-policy" className={styles.link}>Privacy Policy</a>
           <span className={styles.separator}>|</span>
