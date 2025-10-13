@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import ParticleBackground from "@/components/ParticleBackground";
-import Introduction from "@/components/Introduction";
+import Introduction from "../../components/introduction";
 
 export default function About() {
   return (
