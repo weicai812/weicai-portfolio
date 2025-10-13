@@ -1,37 +1,28 @@
 'use client'
 
-
-import Loader from "../components/loader";
 import React, { useState, useEffect } from "react";
+import Loader from "../components/loader";
 import Hero from "../pages/Hero";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Simulate loading progress
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          setLoading(false);
-          clearInterval(interval);
-          return 100;
-        }
-        return prev + 10; // Increase progress by 10%
-      });
-    }, 300); // Update every 300ms
+    const handleLoad = () => setLoading(false);
+
+    // If everything is already loaded (e.g. cached)
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
   }, []);
 
   return (
     <div>
-      {loading ? (
-        <Loader progress={progress} />
-      ) : (
-        <div>
-          <Hero />
-        </div>
-      )}
+      {loading ? <Loader /> : <Hero />}
     </div>
   );
 }
