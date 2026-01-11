@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useEffect } from "react";
 
-const ParticleBackground = ({ particleCount = 200, color = "#00ffff" }) => {
+const ParticleBackground = ({ particleCount = 100, color = "#00ffff" }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
