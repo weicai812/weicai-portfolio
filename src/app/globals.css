@@ -87,3 +87,17 @@ body, html {
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+@media (min-width: 768px) {
+  .tabs-container {
+    flex-direction: row;
+    background: #222;
+    padding: 6px;
+    border-radius: 20px;
+  }
+
+  .tabs-container button {
+    flex: 1;
+    border-radius: 16px;
+  }
+}
