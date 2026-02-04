@@ -3,36 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 7, 89, 133;
   --background-end-rgb: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 7, 89, 133;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: transparent; /* ✅ REQUIRED */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -40,58 +21,37 @@ body, html {
   overflow-x: hidden;
 }
 
-/* Ensure the page container spans the full height of the viewport */
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure full viewport height */
+/* App background wrapper */
+.app-background {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ),
+  rgb(var(--background-start-rgb));
 }
 
-.main-content {
-  flex: 1; /* Pushes the footer to the bottom */
-}
-
-/* Custom Scroll Bar */
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: #051016;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #164E63;
   border-radius: 3px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #a6b2c3;
 }
 
-.black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
+/* Desktop tabs */
 @media (min-width: 768px) {
   .tabs-container {
     flex-direction: row;
-    background: #222;
+    background: rgba(34,34,34,0.6);
     padding: 6px;
     border-radius: 20px;
   }
