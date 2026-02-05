@@ -6,30 +6,31 @@ export default function ParticleBackground({
   color = "#00ffff",
   lineDistance = 120,
   cursorDistance = 100,
-  damping = 0.25
+  damping = 0.25,
+  speedMultiplier = 1.4 // 🔹 slightly faster particles
 }) {
   const canvasRef = useRef(null);
   const cursorRef = useRef({ x: -9999, y: -9999 });
   const [particleCount, setParticleCount] = useState(250); // default mobile
 
+  // Set particle count based on screen width
   useEffect(() => {
-    // Set particle count based on screen width
     function updateParticleCount() {
       if (window.innerWidth >= 768) {
         setParticleCount(450); // desktop
       } else {
-        setParticleCount(100); // mobile
+        setParticleCount(250); // mobile
       }
     }
     updateParticleCount();
     window.addEventListener("resize", updateParticleCount);
-
     return () => window.removeEventListener("resize", updateParticleCount);
   }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
     const ctx = canvas.getContext("2d");
 
     function setSize() {
@@ -57,8 +58,9 @@ export default function ParticleBackground({
 
     // Create particles
     const particles = Array.from({ length: particleCount }, () => {
-      const dx = (Math.random() - 0.5) * 0.3;
-      const dy = (Math.random() - 0.5) * 0.3;
+      const dx = (Math.random() - 0.5) * 0.3 * speedMultiplier;
+      const dy = (Math.random() - 0.5) * 0.3 * speedMultiplier;
+
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -72,7 +74,6 @@ export default function ParticleBackground({
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       const cursor = cursorRef.current;
 
       particles.forEach(p => {
@@ -81,18 +82,18 @@ export default function ParticleBackground({
         const dyMouse = p.y - cursor.y;
         const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
 
-        // Repel if within cursorDistance
+        // Repel from cursor
         if (distMouse < cursorDistance && distMouse > 0) {
-          const force = (cursorDistance - distMouse) / cursorDistance * 2;
+          const force = ((cursorDistance - distMouse) / cursorDistance) * 2;
           p.dx += (dxMouse / distMouse) * force;
           p.dy += (dyMouse / distMouse) * force;
         }
 
-        // Return to base velocity smoothly
+        // Smooth return to base velocity
         p.dx += (p.baseDx - p.dx) * damping;
         p.dy += (p.baseDy - p.dy) * damping;
 
-        // Move particle
+        // Move
         p.x += p.dx;
         p.y += p.dy;
 
@@ -109,12 +110,13 @@ export default function ParticleBackground({
         ctx.fill();
       });
 
-      // Draw lines between particles
+      // Draw connecting lines
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
+
           if (dist < lineDistance) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -138,7 +140,7 @@ export default function ParticleBackground({
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseout", handleMouseLeave);
     };
-  }, [particleCount, color, lineDistance, cursorDistance, damping]);
+  }, [particleCount, color, lineDistance, cursorDistance, damping, speedMultiplier]);
 
   return <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />;
 }

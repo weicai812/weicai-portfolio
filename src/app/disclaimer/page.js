@@ -1,71 +1,132 @@
 import { Inter } from 'next/font/google';
 
-// Apply the font to your component
 const inter = Inter({
-  weight: ['700'], // Choose the weights you need
+  weight: ['700'],
   subsets: ['latin'],
-  display: 'swap', // Optional, improves loading performance
+  display: 'swap',
 });
 
 export default function Disclaimer() {
-    return (
-        <div className='bg-gray-50'>
-            <div className={`container lg:gap-12 gap-y-8 pt-20 pb-4`}>
-                <div className={`text-black text-2xl md:text-4xl ${inter.className}`}>
-                    <h1 className='underline text-2xl md:text-4xl'>DISCLAIMER</h1>
-                </div>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                1. General Information
-                </h2>
-                <p className='px-4 py-2 bg-gray-200'>
-                The information provided on Gan Wei Cai | Portfolio is for general informational purposes only. All content on the Site is provided in good faith, and we strive to ensure that the information is accurate and up-to-date. However, we make no warranties or representations of any kind regarding the accuracy, completeness, or reliability of any information on the Site.
-                </p>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                2. No Professional Advice
-                </h2>
-                <div className='px-4 py-2 bg-gray-200'>
-                <p>
-                The content on the Site does not constitute professional advice, including but not limited to legal, financial, or medical advice. Always seek the advice of qualified professionals with any questions you may have regarding these matters. Reliance on any information provided by the Site is solely at your own risk.
-                </p>
-                </div>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                3. External Links
-                </h2>
-                <div className='px-4 py-2 bg-gray-200'>
-                <p>
-                The Site may contain links to third-party websites or services that are not owned or controlled by us. We do not endorse or assume any responsibility for the content, privacy policies, or practices of any third-party websites. You acknowledge and agree that we shall not be liable for any damage or loss caused by or in connection with the use of any third-party websites or services.
-                </p>
-                </div>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                4. Limitation of Liability
-                </h2>
-                <div className='px-4 py-2 bg-gray-200'>
-                <p>
-                In no event shall we be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data or other intangible losses, resulting from (i) your use of the Site, (ii) your reliance on any information provided on the Site, or (iii) any unauthorized access to or use of our servers and/or any personal information stored therein.
-                </p>
-                </div>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                5. Changes to the Disclaimer
-                </h2>
-                <div className='px-4 py-2 bg-gray-200'>
-                <p>
-                We reserve the right to modify or replace this disclaimer at any time. Your continued use of the Site following the posting of any changes constitutes your acceptance of those changes. It is your responsibility to review this disclaimer periodically for any updates.
-                </p>
-                </div>
-                <h2 className='text-lg md:text-2xl pt-4 font-bold'>
-                6. Contact Us
-                </h2>
-                <div className='px-4 py-2 bg-gray-200'>
-                <p>
-                If you have any questions about this disclaimer or the Site, please contact us at:
-                </p>
-                <p>Email: <a href="mailto:weicai6919@gmail.com">weicai6919@gmail.com</a></p>
-                <p>Tel no: <a href="tel:+6596458117">+6596458117</a></p>
-                </div>
-                <p className='text-center pt-10 text-xm italic'>Last Updated: 11 August 2024</p>
-            </div>
+  return (
+    <div className="bg-gradient-to-br from-[#020617] via-[#022c22] to-[#020617]">
+      <div className="container lg:gap-12 gap-y-8 pt-20 pb-6 text-white">
+
+        {/* Title */}
+        <div className={`text-2xl md:text-4xl ${inter.className}`}>
+          <h1 className="underline decoration-cyan-400">
+            DISCLAIMER
+          </h1>
         </div>
 
+        {/* Section 1 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          1. General Information
+        </h2>
+        <p className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          This portfolio website is provided for general informational and
+          showcase purposes only. All content reflects my personal experience,
+          skills, and projects at the time of publication. While reasonable
+          efforts are made to ensure accuracy, no guarantees are made regarding
+          completeness or correctness.
+        </p>
 
-    );
+        {/* Section 2 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          2. No Professional Advice
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            The content on this website does not constitute professional advice,
+            including but not limited to legal, financial, technical, or career
+            advice. Any actions taken based on the information provided are done
+            at your own discretion and risk.
+          </p>
+        </div>
+
+        {/* Section 3 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          3. Projects and Demonstrations
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            All projects, case studies, and code samples displayed on this
+            website are intended for demonstration and educational purposes
+            only. They may not represent production-ready implementations and
+            should not be used directly without proper review, testing, and
+            modification.
+          </p>
+        </div>
+
+        {/* Section 4 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          4. External Links
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            This website may contain links to third-party websites or resources
+            for reference and convenience. I do not control or endorse the
+            content, accuracy, or practices of any external sites.
+          </p>
+        </div>
+
+        {/* Section 5 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          5. Limitation of Liability
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            Under no circumstances shall I be liable for any direct, indirect,
+            incidental, or consequential damages arising from the use of, or
+            inability to use, this website or its content.
+          </p>
+        </div>
+
+        {/* Section 6 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          6. Changes to This Disclaimer
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            This disclaimer may be updated or modified at any time without prior
+            notice. Continued use of this website indicates acceptance of any
+            changes made.
+          </p>
+        </div>
+
+        {/* Section 7 */}
+        <h2 className="text-lg md:text-2xl pt-6 font-bold">
+          7. Contact
+        </h2>
+        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
+          <p>
+            If you have any questions regarding this disclaimer or the content of
+            this portfolio, feel free to reach out via:
+          </p>
+          <p>
+            Email:{' '}
+            <a
+              href="mailto:weicai6919@gmail.com"
+              className="text-cyan-300 underline"
+            >
+              weicai6919@gmail.com
+            </a>
+          </p>
+          <p>
+            Tel:{' '}
+            <a
+              href="tel:+6596458117"
+              className="text-cyan-300 underline"
+            >
+              +65 9645 8117
+            </a>
+          </p>
+        </div>
+
+        {/* Footer */}
+        <p className="text-center pt-10 text-sm italic text-gray-400">
+          Last Updated: 05 February 2026
+        </p>
+      </div>
+    </div>
+  );
 }

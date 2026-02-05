@@ -6,7 +6,7 @@ const inter = Inter({
   display: 'swap',
 });
 
-export default function Privacy() {
+export default function SecurityPolicy() {
   return (
     <div className="bg-gradient-to-br from-[#020617] via-[#022c22] to-[#020617]">
       <div className="container lg:gap-12 gap-y-8 pt-20 pb-6 text-white">
@@ -14,7 +14,7 @@ export default function Privacy() {
         {/* Title */}
         <div className={`text-2xl md:text-4xl ${inter.className}`}>
           <h1 className="underline decoration-cyan-400">
-            PRIVACY POLICY
+            SECURITY POLICY
           </h1>
         </div>
 
@@ -23,83 +23,74 @@ export default function Privacy() {
           1. Introduction
         </h2>
         <p className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
-          This portfolio website is designed to showcase my skills, projects, and experience.
-          This Privacy Policy explains how any personal information you voluntarily provide is used.
-          All interactions are safe and intended for professional communication only.
+          This Security Policy explains how I manage and protect the technical security of this portfolio website.
+          While this website does not store sensitive user information, I follow industry-standard practices to maintain site integrity and protect visitor interactions.
         </p>
 
         {/* Section 2 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          2. Information You Provide
+          2. Data Handling
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
           <p>
-            I do not collect personal information automatically. Any information you provide,
-            such as via email or contact forms, is used only to respond to your inquiry or message.
+            This website does not collect personal information automatically. Any data voluntarily provided (e.g., through email or contact forms) is handled responsibly and used only to respond to inquiries.
           </p>
         </div>
 
         {/* Section 3 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          3. Use of Information
+          3. Technical Security Measures
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
           <p>
-            Information you voluntarily share is used solely for professional communication,
-            networking, or discussion regarding projects, collaboration, or employment opportunities.
+            Reasonable technical measures are implemented to secure this website:
           </p>
+          <ul className="list-disc list-inside mt-2">
+            <li>Regular updates of code and dependencies</li>
+            <li>Hosting on a secure platform with HTTPS enabled</li>
+            <li>Protection against common vulnerabilities (e.g., XSS, CSRF)</li>
+            <li>Regular backups and monitoring for uptime</li>
+          </ul>
         </div>
 
         {/* Section 4 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          4. Cookies & Analytics
+          4. Third-Party Services
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
           <p>
-            This website does not use tracking cookies or analytics that identify you personally.
-            Standard server logs may record IP addresses for security purposes only.
+            Any third-party services or links (such as GitHub or LinkedIn) are used solely for portfolio demonstration purposes.
+            I am not responsible for the security practices of external platforms.
           </p>
         </div>
 
         {/* Section 5 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          5. External Links
+          5. User Responsibility
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
           <p>
-            This website may link to GitHub, LinkedIn, or other project demos.
-            I am not responsible for the privacy practices of external websites.
+            Users are encouraged to maintain personal security when contacting me or interacting with this website.
+            Do not share sensitive personal or financial information through email or public forms.
           </p>
         </div>
 
         {/* Section 6 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          6. Data Security
+          6. Policy Updates
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
           <p>
-            Reasonable measures are taken to protect any data you voluntarily provide,
-            but no online system is completely secure.
+            This Security Policy may be updated periodically. Updates will be reflected on this page with the revised date.
           </p>
         </div>
 
         {/* Section 7 */}
         <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          7. Changes
+          7. Contact
         </h2>
         <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
-          <p>
-            This Privacy Policy may be updated occasionally. Changes will be reflected here
-            with the updated revision date.
-          </p>
-        </div>
-
-        {/* Section 8 */}
-        <h2 className="text-lg md:text-2xl pt-6 font-bold">
-          8. Contact
-        </h2>
-        <div className="px-4 py-3 rounded-md bg-gradient-to-r from-emerald-900 to-blue-900">
-          <p>If you have any questions about this Privacy Policy, you may contact me:</p>
+          <p>If you have any questions about the Security Policy, you may contact me:</p>
           <p>Email: <a href="mailto:weicai6919@gmail.com" className="text-cyan-300 underline">weicai6919@gmail.com</a></p>
           <p>Tel: <a href="tel:+6596458117" className="text-cyan-300 underline">+65 9645 8117</a></p>
         </div>
