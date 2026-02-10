@@ -1,0 +1,124 @@
+/* Intro Section */
+.intro-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 28px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 24px;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Profile */
+.intro-profile {
+  display: flex;
+  justify-content: center;
+}
+.intro-profile img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Tabs */
+.intro-tabs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.intro-tab {
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: rgba(30, 30, 30, 0.6);
+  color: #fff;
+  transition: all 0.25s ease;
+}
+.intro-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.6);
+}
+.intro-tab.active {
+  background: rgba(0, 255, 255, 0.95);
+  color: #000;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.9);
+  transform: none;
+}
+
+/* Soft Skills */
+.soft-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  column-gap: 40px;
+  row-gap: 14px;
+}
+.soft-skill-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.soft-skill-item:hover {
+  color: #fff;
+}
+.soft-skill-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #00ffff;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(0, 255, 255, 0.6);
+}
+
+/* Hard / Language Bars */
+.skill-bar-container {
+  margin-bottom: 22px;
+}
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+  opacity: 0.9;
+  color: #ccc;
+}
+.skill-bar {
+  height: 9px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: #00ffff;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .intro-tabs {
+    flex-direction: row;
+  }
+  .intro-tab {
+    flex: 1;
+  }
+}
