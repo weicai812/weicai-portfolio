@@ -32,6 +32,11 @@ export default function Introduction() {
         <img src="/profile.jpg" alt="Profile" />
       </div>
 
+      {/* Name */}
+      <div className="intro-name">
+        Gan Wei Cai
+      </div>
+
       {/* Tabs */}
       <div
         className="intro-tabs"

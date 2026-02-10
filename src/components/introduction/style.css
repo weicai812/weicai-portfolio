@@ -1,4 +1,4 @@
-/* Intro Section */
+/* ---------------- Intro Section ---------------- */
 .intro-section {
   max-width: 900px;
   margin: 60px auto;
@@ -11,13 +11,13 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 24px;
-  border: 1px solid rgba(0, 255, 255, 0.25);
+  border: 1px solid rgba(0, 255, 255, 0.25); /* cyan border */
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
   position: relative;
   z-index: 1;
 }
 
-/* Profile */
+/* ---------------- Profile ---------------- */
 .intro-profile {
   display: flex;
   justify-content: center;
@@ -26,12 +26,58 @@
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 3px solid #00ffff;
+  border: 3px solid #00ffff; /* cyan */
   object-fit: cover;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 20px #00ffff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.intro-profile img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff44;
 }
 
-/* Tabs */
+/* ---------------- Name (Enhanced) ---------------- */
+.intro-name {
+  text-align: center;
+  font-size: 48px;               /* slightly bigger for impact */
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Permanent Marker', cursive; /* playful / creative vibe */
+  
+  /* Animated Gradient */
+  background: linear-gradient(270deg, #00ffff, #33ffea, #00ccff, #ff33ff);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 8s ease infinite;
+
+  /* Neon Glow */
+  text-shadow:
+    0 0 3px #00ffff55,
+    0 0 10px #33ffea33,
+    0 0 20px #00ccff22;
+  
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.intro-name:hover {
+  transform: scale(1.08);
+  text-shadow:
+    0 0 6px #00ffffaa,
+    0 0 14px #33ffeaaa,
+    0 0 28px #ff33ff55;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+/* ---------------- Tabs ---------------- */
 .intro-tabs {
   display: flex;
   gap: 12px;
@@ -40,7 +86,7 @@
 .intro-tab {
   padding: 14px;
   border-radius: 16px;
-  border: 1px solid rgba(0, 255, 255, 0.35);
+  border: 1px solid rgba(0, 255, 255, 0.35); /* cyan */
   cursor: pointer;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -50,16 +96,16 @@
 }
 .intro-tab:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 14px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 14px #00ffff, 0 0 28px #00ffff44;
 }
 .intro-tab.active {
   background: rgba(0, 255, 255, 0.95);
   color: #000;
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.9);
+  box-shadow: 0 0 18px #00ffff, 0 0 36px #00ffff44;
   transform: none;
 }
 
-/* Soft Skills */
+/* ---------------- Soft Skills ---------------- */
 .soft-skills-list {
   list-style: none;
   padding: 0;
@@ -72,7 +118,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.4px;
   color: #ccc;
   transition: color 0.3s;
@@ -81,15 +127,24 @@
   color: #fff;
 }
 .soft-skill-bullet {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: #00ffff;
+  background: #00ffff; /* cyan */
   flex-shrink: 0;
-  box-shadow: 0 0 6px rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 8px #00ffff44, 0 0 16px #00ffff22;
+  animation: pulseBullet 2s infinite ease-in-out;
+}
+@keyframes pulseBullet {
+  0%, 100% {
+    box-shadow: 0 0 8px #00ffff44, 0 0 16px #00ffff22;
+  }
+  50% {
+    box-shadow: 0 0 16px #00ffffaa, 0 0 32px #00ffff44;
+  }
 }
 
-/* Hard / Language Bars */
+/* ---------------- Hard / Language Bars ---------------- */
 .skill-bar-container {
   margin-bottom: 22px;
 }
@@ -109,11 +164,12 @@
 }
 .skill-bar-fill {
   height: 100%;
-  background: #00ffff;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+  background: #00ffff; /* cyan */
+  box-shadow: 0 0 12px #00ffff, 0 0 24px #00ffff44;
+  transition: all 0.4s ease;
 }
 
-/* Responsive */
+/* ---------------- Responsive ---------------- */
 @media (min-width: 768px) {
   .intro-tabs {
     flex-direction: row;
