@@ -19,7 +19,7 @@
 /* Mobile view */
 @media (max-width: 768px){
   .about-title{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 2.2rem;
   }
 }
