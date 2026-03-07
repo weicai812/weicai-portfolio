@@ -1,0 +1,25 @@
+.about-wrapper{
+  position: relative;
+  z-index: 1;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.about-container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Mobile view */
+@media (max-width: 768px){
+  .about-title{
+    margin-top: 40px;
+    font-size: 2.2rem;
+  }
+}

@@ -3,6 +3,7 @@
 import React from "react";
 import ParticleBackground from "@/components/ParticleBackground";
 import Introduction from "@/components/introduction";
+import './style.css';
 
 export default function About() {
   return (
@@ -11,11 +12,11 @@ export default function About() {
       <ParticleBackground particleCount={250} color="#00ffff" />
 
       {/* Main content */}
-      <div style={{ position: "relative", zIndex: 1, padding: "50px 20px", minHeight: "100vh" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h1 style={{ fontSize: "3rem", textAlign: "center", marginTop: 15 }}>
-            About Me
-          </h1>
+      <div className="about-wrapper">
+      <div className="about-container">
+        <h1 className="about-title">
+          About Me
+        </h1>
 
           <Introduction />
         </div>
