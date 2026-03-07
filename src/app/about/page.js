@@ -13,7 +13,7 @@ export default function About() {
       {/* Main content */}
       <div style={{ position: "relative", zIndex: 1, padding: "50px 20px", minHeight: "100vh" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h1 style={{ fontSize: "3rem", textAlign: "center", marginBottom: 40 }}>
+          <h1 style={{ fontSize: "3rem", textAlign: "center", marginTop: 15 }}>
             About Me
           </h1>
 
