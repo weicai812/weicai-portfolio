@@ -7,7 +7,7 @@ export default function ParticleBackground({
   lineDistance = 120,
   cursorDistance = 100,
   damping = 0.25,
-  speedMultiplier = 1.4 // 🔹 slightly faster particles
+  speedMultiplier = 1.8 // 🔹 slightly faster particles
 }) {
   const canvasRef = useRef(null);
   const cursorRef = useRef({ x: -9999, y: -9999 });

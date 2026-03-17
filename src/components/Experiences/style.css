@@ -1,0 +1,242 @@
+/* ============================= */
+/* TIMELINE CONTAINER */
+/* ============================= */
+
+.timeline {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 45px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #00ffff;
+  opacity: 0.35;
+}
+
+/* ============================= */
+/* TIMELINE ITEM */
+/* ============================= */
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 45px;
+
+  /* scroll animation */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* timeline dot */
+.timeline-dot {
+  position: absolute;
+  left: -2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* ============================= */
+/* TIMELINE CARD (GLASS) */
+/* ============================= */
+
+.timeline-content {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,255,255,0.25);
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 18px rgba(0,255,255,0.25);
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.exp-left {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.exp-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  background: white;
+  border-radius: 6px;
+  padding: 3px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.exp-role {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.exp-meta {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.company-link {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+.exp-right {
+  text-align: right;
+}
+
+.badge {
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.date {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #9ca3af;
+}
+
+/* ============================= */
+/* DESCRIPTION */
+.exp-description {
+  margin-top: 18px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* ============================= */
+/* ACHIEVEMENTS LIST */
+.exp-list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.exp-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* ============================= */
+/* TECH STACK */
+.tech-stack {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-stack span {
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 3px 9px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #e5e7eb;
+}
+
+/* ============================= */
+/* PROJECT SECTION */
+.project-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.project-title {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    left: 8px;
+  }
+
+  .timeline-dot {
+    left: -5px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-content {
+    padding: 22px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .exp-right {
+    text-align: left;
+  }
+
+  .exp-role {
+    font-size: 18px;
+  }
+
+  .exp-description {
+    font-size: 14px;
+  }
+
+  .exp-list li {
+    font-size: 14px;
+  }
+
+  .tech-stack span {
+    font-size: 11px;
+  }
+}
