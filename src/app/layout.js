@@ -94,7 +94,7 @@ export default function RootLayout({ children }) {
               url: 'https://weicai-portfolio.vercel.app',
               jobTitle: 'Software Developer & Data Analyst',
               sameAs: [
-                'https://github.com/YOUR_GITHUB',
+                'https://github.com/weicai812',
                 'https://www.linkedin.com/in/YOUR_LINKEDIN',
               ],
             }),
