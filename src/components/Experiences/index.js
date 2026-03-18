@@ -1,6 +1,9 @@
+'use client'
+
 import "./style.css";
 import { experiences } from "@/constants/experience";
 import { useEffect, useRef } from "react";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function ExperienceTimeline() {
 
@@ -42,7 +45,9 @@ export default function ExperienceTimeline() {
                 <div>
                   <h3 className="exp-role">{exp.role}</h3>
                   <div className="exp-meta">
-                    <a href={exp.website} target="_blank" rel="noopener noreferrer" className="company-link">{exp.company}</a>
+                    <a href={exp.website} target="_blank" rel="noopener noreferrer" className="company-link">
+                      {exp.company}
+                    </a>
                     <span> | {exp.location}</span>
                   </div>
                 </div>
@@ -65,11 +70,29 @@ export default function ExperienceTimeline() {
 
             {exp.projects && exp.projects.map((project, i) => (
               <div className="project-section" key={i}>
-                <h4 className="project-title">{project.name}</h4>
+
+                {/* Project Header + Icon */}
+                <div className="project-header">
+                  <h4 className="project-title">{project.name}</h4>
+
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link-icon"
+                    >
+                      <FiExternalLink />
+                    </a>
+                  )}
+                </div>
+
                 <p className="project-desc">{project.description}</p>
+
                 <div className="tech-stack">
                   {project.tech.map((t, j) => <span key={j}>{t}</span>)}
                 </div>
+
               </div>
             ))}
 

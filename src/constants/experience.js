@@ -17,14 +17,17 @@ export const experiences = [
       "Improved reporting efficiency for management decisions."
     ],
 
-    tech: ["Power BI", "SQL", "Excel"],
+    tech: ["Python", "Jupyter Notebook","Data Analysis", "ETL","Excel"],
 
     projects: [
       {
-        name: "Sales Analytics Dashboard",
+        name: "Financial Performance & Payment Receivable Analysis",
+        link: "https://github.com/weicai812/Business-Analysis",
         description:
-          "Developed a Power BI dashboard for monitoring monthly sales performance and inventory trends.",
-        tech: ["Power BI", "SQL", "Excel"]
+          "Screened financial receivable amounts to identify discrepancies and inconsistencies, while analyzing e-commerce sales data using Python and Excel. " +
+          "Performed data extraction and ETL processes to validate transactions, monitor outstanding balances, and generate insights on sales performance " +
+          "and revenue trends to support accurate financial reporting and business decision-making.",
+        tech: ["Python", "Jupyter Notebook", "ETL","Excel"]
       }
     ]
   },
@@ -60,13 +63,13 @@ export const experiences = [
   },
 
   {
-    role: "Data Science Trainee",
-    company: "Universiti Malaya",
+    role: "Data Analyst Engineer",
+    company: "Department of Information Technology, Universiti Malaya",
     website: "https://www.um.edu.my",
     logo: "/company/um.png",
-    location: "Kuala Lumpur",
+    location: "Kuala Lumpur, Malaysia",
     type: "Trainee",
-    date: "2023",
+    date: "Jan 2023 - Apr 2023",
 
     description:
       "Worked on analytics dashboards and data pipelines for university data reporting.",
@@ -77,25 +80,16 @@ export const experiences = [
       "Improved internal reporting processes"
     ],
 
-    tech: ["Python", "Power BI", "SQL"],
-
-    projects: [
-      {
-        name: "University Data Dashboard",
-        description:
-          "Created Power BI dashboards to visualize university operational and student datasets.",
-        tech: ["Power BI", "Python", "SQL"]
-      }
-    ]
+    tech: ["Python", "Power BI", "SQL", "DAX", "SSRS"],
   },
     {
-    role: "Business Analyst",
-    company: "Sing Long Foodstuff Trading Company Pte Ltd",
-    website: "https://example.com",
+    role: "UIUX Developer",
+    company: "TraitQuest Innovation Sdn Bhd",
+    website: "https://www.linkedin.com/company/traitquest/",
     logo: "/company/traitquest.png",
-    location: "Singapore",
-    type: "Full-time",
-    date: "2024 - Present",
+    location: "Kuala Lumpur, Malaysia ",
+    type: "Trainee",
+    date: "Oct 2022 - Dec 2022",
 
     description:
       "Analyze company financial performance, product sales and inventory trends to support management decisions.",
@@ -106,16 +100,7 @@ export const experiences = [
       "Improved reporting efficiency for management decisions."
     ],
 
-    tech: ["Power BI", "SQL", "Excel"],
-
-    projects: [
-      {
-        name: "Sales Analytics Dashboard",
-        description:
-          "Developed a Power BI dashboard for monitoring monthly sales performance and inventory trends.",
-        tech: ["Power BI", "SQL", "Excel"]
-      }
-    ]
+    tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "HTML", "CSS", "JavaScript"],
   }
 
   

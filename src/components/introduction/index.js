@@ -29,7 +29,7 @@ export default function Introduction() {
     <section className="intro-section">
       {/* Profile */}
       <div className="intro-profile">
-        <img src="/profile.jpg" alt="Profile" />
+        <img src="/profile.png" alt="Profile" />
       </div>
 
       {/* Name */}
