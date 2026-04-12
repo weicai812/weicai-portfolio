@@ -1,3 +1,4 @@
+
 /* ============================= */
 /* TIMELINE CONTAINER */
 /* ============================= */
@@ -14,30 +15,30 @@
   top: 0;
   width: 2px;
   height: 100%;
-  background: #00ffff;
-  opacity: 0.35;
+  background: #00ffff50;
 }
 
 /* ============================= */
 /* TIMELINE ITEM */
 /* ============================= */
-.timeline-item {
+.timelineItem {
   position: relative;
   margin-bottom: 45px;
 
-  /* scroll animation */
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
 }
 
-.timeline-item.in-view {
+.inView {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* timeline dot */
-.timeline-dot {
+/* ============================= */
+/* DOT */
+/* ============================= */
+.timelineDot {
   position: absolute;
   left: -2px;
   width: 18px;
@@ -48,79 +49,76 @@
 }
 
 /* ============================= */
-/* TIMELINE CARD (GLASS) */
+/* CARD */
 /* ============================= */
-.timeline-content {
-  background: rgba(0,0,0,0.35);
+.timelineContent {
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,255,255,0.25);
+  border: 1px solid rgba(0, 255, 255, 0.25);
   padding: 30px;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-.timeline-content:hover {
+.timelineContent:hover {
   border-color: #00ffff;
-  box-shadow: 0 0 18px rgba(0,255,255,0.25);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
 }
 
 /* ============================= */
 /* HEADER */
 /* ============================= */
-.exp-header {
+.expHeader {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* wrap for mobile spacing */
+  flex-wrap: wrap;
   gap: 8px;
 }
 
-/* LEFT SIDE */
-.exp-left {
+.expLeft {
   display: flex;
   gap: 14px;
   align-items: center;
 }
 
-.exp-logo {
+.expLogo {
   width: 42px;
   height: 42px;
   object-fit: contain;
   background: white;
   border-radius: 6px;
   padding: 3px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.exp-role {
+.expRole {
   font-size: 20px;
   font-weight: 600;
   color: white;
 }
 
-.exp-meta {
+.expMeta {
   font-size: 14px;
   color: #9ca3af;
 }
 
-.company-link {
+.companyLink {
   color: #00ffff;
   text-decoration: none;
   font-weight: 500;
 }
 
-.company-link:hover {
+.companyLink:hover {
   text-decoration: underline;
 }
 
-/* RIGHT SIDE */
-.exp-right {
+.expRight {
   text-align: right;
 }
 
 .badge {
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 3px 10px;
   font-size: 12px;
   border-radius: 4px;
@@ -133,21 +131,20 @@
 }
 
 /* ============================= */
-/* DESCRIPTION */
-.exp-description {
+/* TEXT */
+/* ============================= */
+.expDescription {
   margin-top: 18px;
   line-height: 1.6;
   color: #d1d5db;
 }
 
-/* ============================= */
-/* ACHIEVEMENTS LIST */
-.exp-list {
+.expList {
   margin-top: 15px;
   padding-left: 20px;
 }
 
-.exp-list li {
+.expList li {
   margin-bottom: 8px;
   line-height: 1.6;
   color: #cbd5f5;
@@ -155,15 +152,16 @@
 
 /* ============================= */
 /* TECH STACK */
-.tech-stack {
+/* ============================= */
+.techStack {
   margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.tech-stack span {
-  border: 1px solid rgba(255,255,255,0.25);
+.techStack span {
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 3px 9px;
   font-size: 12px;
   border-radius: 4px;
@@ -171,54 +169,49 @@
 }
 
 /* ============================= */
-/* PROJECT SECTION */
-.project-section {
+/* PROJECT */
+/* ============================= */
+.projectSection {
   margin-top: 20px;
   padding-top: 15px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 10px; /* ensures gap between title, description, tech */
+  gap: 10px;
 }
 
-/* Project Header (title + icon) */
-.project-header {
+.projectHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0;
 }
 
-/* Project title */
-.project-title {
+.projectTitle {
   font-size: 16px;
   color: white;
   margin: 0;
 }
 
-/* Gap between project title and description */
-.project-desc {
+.projectDesc {
   font-size: 14px;
   color: #cbd5f5;
   line-height: 1.6;
-  margin-top: 6px; /* gap between title and desc */
+  margin-top: 6px;
 }
 
-/* Project link icon */
-.project-link-icon {
+.projectLinkIcon {
   font-size: 18px;
   color: #00ffff;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
 
-.project-link-icon:hover {
+.projectLinkIcon:hover {
   transform: scale(1.2);
   color: #ffffff;
 }
 
 /* ============================= */
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 /* ============================= */
 @media (max-width: 768px) {
   .timeline {
@@ -229,42 +222,42 @@
     left: 8px;
   }
 
-  .timeline-dot {
+  .timelineDot {
     left: -5px;
     width: 14px;
     height: 14px;
   }
 
-  .timeline-content {
+  .timelineContent {
     padding: 22px;
   }
 
-  .exp-header {
+  .expHeader {
     flex-direction: column;
     gap: 12px;
   }
 
-  .exp-right {
+  .expRight {
     text-align: left;
   }
 
-  .exp-role {
+  .expRole {
     font-size: 18px;
   }
 
-  .exp-description {
+  .expDescription {
     font-size: 14px;
   }
 
-  .exp-list li {
+  .expList li {
     font-size: 14px;
   }
 
-  .tech-stack span {
+  .techStack span {
     font-size: 11px;
   }
 
-  .project-desc {
+  .projectDesc {
     font-size: 13px;
   }
 }

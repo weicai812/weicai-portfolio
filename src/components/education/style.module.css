@@ -1,0 +1,421 @@
+.section {
+  background-color: transparent;
+  padding: 80px 0;
+  min-height: 100vh;
+  font-family: "Sora", "DM Sans", sans-serif;
+  position: relative;
+  z-index: 1; /* sits above the particle canvas layer */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 64px;
+  letter-spacing: -0.5px;
+}
+
+/* ── Timeline layout ── */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  z-index: 1;
+}
+
+/* Continuous vertical line running the full height of the timeline */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* center of the 3-col grid: left 1fr + half of 56px spine = calc(50% - 0px) */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #00e5cc 0%,
+    rgba(0, 229, 204, 0.4) 60%,
+    rgba(0, 229, 204, 0.08) 100%
+  );
+  z-index: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Left & right slots ── */
+.leftSlot {
+  grid-column: 1;
+  display: flex;
+  justify-content: flex-end; /* push content toward the spine */
+  padding-bottom: 64px;
+}
+
+.rightSlot {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-start; /* push content toward the spine */
+  padding-bottom: 64px;
+}
+
+/* Card wrappers — full width of their slot with inner padding */
+.cardWrapperLeft {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.cardWrapperRight {
+  width: 100%;
+  padding-left: 40px;
+}
+
+/* Date badge wrappers — hug the spine */
+.dateWrapperLeft {
+  padding-right: 40px;
+  padding-top: 2px;
+}
+
+.dateWrapperRight {
+  padding-left: 40px;
+  padding-top: 2px;
+}
+
+.centerCol {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  background-color: #00e5cc;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  transform: rotate(45deg);
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 12px rgba(0, 229, 204, 0.5);
+}
+
+.dateBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(17, 17, 17, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 6px 14px;
+  color: #cccccc;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.calIcon {
+  color: #00e5cc;
+  font-size: 0.85rem;
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  z-index: 2;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 229, 204, 0.25);
+  box-shadow: 0 0 32px rgba(0, 229, 204, 0.06);
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0 0 12px;
+  letter-spacing: -0.2px;
+}
+
+.metaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: #888888;
+  font-size: 0.82rem;
+}
+
+.metaIcon {
+  color: #00e5cc;
+  margin-top: 1px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #1e1e1e;
+  margin: 20px 0;
+}
+
+.description {
+  color: #999999;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  border-left: 2px solid #00e5cc;
+  padding-left: 14px;
+  margin: 0 0 20px;
+}
+
+/* ── Achievements ── */
+.achievementsTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.trophyIcon {
+  color: #00e5cc;
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.achievementItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #bbbbbb;
+  line-height: 1.5;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background: #00e5cc;
+  border-radius: 1px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* ── Card Footer ── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid #1e1e1e;
+}
+
+.logoPlaceholder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #00e5cc;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logoSquare {
+  width: 22px;
+  height: 22px;
+  background: #00e5cc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #000;
+  font-weight: 900;
+}
+
+.certLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cccccc;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.certLink:hover {
+  color: #00e5cc;
+}
+
+.certIcon {
+  font-size: 0.75rem;
+}
+
+/* ── Scroll reveal animations ── */
+
+/* Base hidden states */
+.revealLeft {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revealRight {
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revealUp {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Dot: scale in + glow */
+.revealDot {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.2);
+  transition: opacity 0.4s ease,
+              transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+
+/* Visible state — toggled by IntersectionObserver */
+.visible {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) scale(1) !important;
+}
+
+/* Keep dot rotation when visible */
+.revealDot.visible {
+  transform: rotate(45deg) scale(1) !important;
+  box-shadow: 0 0 18px rgba(0, 229, 204, 0.7);
+}
+
+/* Dot pulse after appearing */
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0, 229, 204, 0.5); }
+  50%       { box-shadow: 0 0 24px rgba(0, 229, 204, 0.9), 0 0 40px rgba(0, 229, 204, 0.3); }
+}
+
+.revealDot.visible {
+  animation: dotPulse 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* ── Visibility helpers ── */
+/* Date inside card: hidden on desktop, shown on mobile */
+.metaDateMobile {
+  display: none;
+}
+
+/* Date badge outside card: shown on desktop, hidden on mobile */
+.desktopOnly {
+  display: flex;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Reposition the continuous line flush to the left spine */
+  .timeline::before {
+    left: 9px;
+    transform: none;
+  }
+
+  /* Collapse to 2-col: [dot col] [card col] */
+  .timelineItem {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-rows: auto;
+    align-items: flex-start;
+  }
+
+  /* Dot column — spans full height of the row */
+  .centerCol {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+    z-index: 2;
+  }
+
+  /* Both slots collapse into one card column */
+  .leftSlot,
+  .rightSlot {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+  }
+
+  /* Hide the floating date badges on mobile */
+  .desktopOnly {
+    display: none !important;
+  }
+
+  /* Show the date row inside the card on mobile */
+  .metaDateMobile {
+    display: flex;
+  }
+
+  /* Card wrappers: full width, padding only on left toward spine */
+  .cardWrapperLeft,
+  .cardWrapperRight {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 0;
+  }
+
+  /* Achievements stack to single column */
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+}
