@@ -36,7 +36,7 @@ export const metadata = {
     description:
       'Explore projects, skills, and experience in software development, data analytics, and data science.',
     url: '/',
-    siteName: 'Gan Wei Cai Portfolio',
+    siteName: 'Gan Wei Cai', // 🔥 strengthened
     images: [
       {
         url: '/og-image.png',
@@ -83,30 +83,42 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Structured Data for SEO */}
+        {/* ✅ Structured Data for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Gan Wei Cai',
-              url: 'https://weicai-portfolio.vercel.app',
-              jobTitle: 'Software Developer & Data Analyst',
-              sameAs: [
-                'https://github.com/weicai812',
-                'https://www.linkedin.com/in/YOUR_LINKEDIN',
-              ],
-            }),
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Person',
+                name: 'Gan Wei Cai',
+                url: 'https://weicai-portfolio.vercel.app',
+                jobTitle: 'Software Developer & Data Analyst',
+                sameAs: [
+                  'https://github.com/weicai812',
+                  'https://www.linkedin.com/in/YOUR_LINKEDIN',
+                ],
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'Gan Wei Cai', // 🔥 THIS is the key fix
+                url: 'https://weicai-portfolio.vercel.app',
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target:
+                    'https://weicai-portfolio.vercel.app/?q={search_term_string}',
+                  'query-input': 'required name=search_term_string',
+                },
+              },
+            ]),
           }}
         />
 
         {/* App Background Wrapper */}
         <div className="app-background">
-          {/* Navbar on top */}
           <Navbar />
 
-          {/* Particle canvas will be added in pages like about/page.js */}
           <main
             style={{
               position: 'relative',
