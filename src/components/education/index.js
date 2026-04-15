@@ -128,7 +128,7 @@ function EducationCard({ edu }) {
       <div className={styles.cardFooter}>
         <div className={styles.logoPlaceholder}>
           <div className={styles.logoSquare}>T</div>
-          TAR UMT
+          
         </div>
         <a
           href={edu.certificateUrl}
