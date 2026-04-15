@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
                 jobTitle: 'Software Developer & Data Analyst',
                 sameAs: [
                   'https://github.com/weicai812',
-                  'https://www.linkedin.com/in/YOUR_LINKEDIN',
+                  'https://www.linkedin.com/in/gan-wei-cai-5183c/',
                 ],
               },
               {
