@@ -29,8 +29,6 @@ export const educationData = [
     achievements: [
       { label: "Graduated with CGPA: 3.17/4.0" },
       { label: "Secretary, Chess Club" },
-    ],
-    logo: "/tarumt-logo.png",
-    certificateUrl: "#",
-  },
+    ]
+  }
 ];

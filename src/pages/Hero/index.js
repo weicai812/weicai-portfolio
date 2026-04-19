@@ -1,27 +1,43 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faFileAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { Ovo } from 'next/font/google';
 import backgroundImage from '../../assets/blue-calc.jpg';
 import styles from '../Hero/Hero.module.css';
 
-// Apply the font to your component
 const ovo = Ovo({
-  weight: ['400'], // Choose the weights you need
+  weight: ['400'],
   subsets: ['latin'],
-  display: 'swap', // Optional, improves loading performance
+  display: 'swap',
 });
 
+const phoneNumbers = [
+  {
+    country: 'Singapore',
+    flag: '🇸🇬',
+    number: '+65 9645 8117',
+    tel: 'tel:+6596458117',
+  },
+  {
+    country: 'Malaysia',
+    flag: '🇲🇾',
+    number: '+60 18-394 4253',
+    tel: 'tel:+60183944253',
+  },
+];
+
 export default function Hero() {
+  const [showCallModal, setShowCallModal] = useState(false);
 
   return (
     <section className={`${styles['section-background']} relative flex flex-col items-center justify-between py-28 lg:py-28`}>
       <div className={styles['image-wrapper']}>
-        <Image 
+        <Image
           src={backgroundImage}
           alt="Background"
           fill
@@ -30,34 +46,35 @@ export default function Hero() {
           priority
         />
       </div>
-      
+
       <div className="container mx-auto grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 z-10 pt-28 pb-10">
         <div className="order-1 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem] z-10">
             Hello, <br />
-            This is {' '}
+            This is{' '}
             <span className="text-[#16f2b3]">Gan Wei Cai</span>
-            {` , `}<br />{` I'm a Professional `} <br />
-            <span className='text-pink-500'>
-            <Typewriter
-            options={{
-              strings: ['Data Scientist', 'Software Engineer','Web Developer'],
-              autoStart: true,
-              loop: true
-            }}
-          />
+            {` , `}<br />{` I'm a Professional `}<br />
+            <span className="text-pink-500">
+              <Typewriter
+                options={{
+                  strings: ['Data Scientist', 'Software Engineer', 'Web Developer'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </span>
           </h1>
 
-          {/* Buttons with call icons and tel links */}
+          {/* Buttons */}
           <div className="flex mt-4 space-x-4">
-            <a href="tel:+6596458117" className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white">
+            <button onClick={() => setShowCallModal(true)} className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white transition-all duration-200">
               <FontAwesomeIcon icon={faPhone} className="mr-2" />
-              <span className='px-4'>Call Me</span>
-            </a>
-            <a href="/resume" className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white" rel="noopener noreferrer">
+              <span className="px-4">Call Me</span>
+            </button>
+
+            <a href="/resume" rel="noopener noreferrer" className="flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-900 rounded-full shadow hover:from-cyan-600 hover:to-cyan-950 text-white">
               <FontAwesomeIcon icon={faFileAlt} className="mr-2" />
-              <span className='px-4'>Resume</span>
+              <span className="px-4">Resume</span>
             </a>
           </div>
 
@@ -73,8 +90,9 @@ export default function Hero() {
               <FontAwesomeIcon icon={faGoogle} />
             </a>
           </div>
-
         </div>
+
+        {/* Code Card */}
         <div className="order-2 lg:order-2 from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] z-10">
           <div className="flex flex-row">
             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
@@ -102,7 +120,7 @@ export default function Hero() {
                 <span className="text-gray-400">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">programming_skills:</span>
+                <span className="text-white">programming_skills:</span>
                 <span className="text-gray-400">{`['`}</span>
                 <span className="text-amber-300">Java</span>
                 <span className="text-gray-400">{"', '"}</span>
@@ -169,6 +187,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
       {/* Overview Section */}
       <div className="w-full py-8 px-4 lg:px-8">
         <div className="container mx-auto">
@@ -186,6 +205,65 @@ export default function Hero() {
           </p>
         </div>
       </div>
+
+      {/* Call Modal */}
+      {showCallModal && (
+        <div onClick={(e) => e.target === e.currentTarget && setShowCallModal(false)} className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm px-4 pb-6 sm:pb-0">
+          <div className="w-full sm:w-80 bg-gradient-to-b from-[#0d1224] to-[#0a0d37] border border-[#1b2c68a0] rounded-2xl overflow-hidden">
+
+            {/* Top accent line */}
+            <div className="flex flex-row">
+              <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
+              <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+            </div>
+
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 pt-5 pb-3">
+              <div>
+                <h3 className="text-white font-semibold text-base">Select a Number</h3>
+                <p className="text-gray-400 text-xs mt-0.5">Choose your country to call</p>
+              </div>
+              <button onClick={() => setShowCallModal(false)} className="flex items-center justify-center w-8 h-8 rounded-full bg-[#1b2c68]/40 hover:bg-[#1b2c68]/80 text-gray-400 hover:text-white transition-all duration-200">
+                <FontAwesomeIcon icon={faTimes} className="text-sm" />
+              </button>
+            </div>
+
+            {/* Divider */}
+            <div className="mx-5 h-[1px] bg-indigo-900/60 mb-4"></div>
+
+            {/* Country Options */}
+            <div className="flex flex-col gap-3 px-5">
+              {phoneNumbers.map(({ country, flag, number, tel }) => (
+                <a key={country} href={tel} onClick={() => setShowCallModal(false)} className="flex items-center gap-4 p-3 rounded-xl border border-[#1b2c68a0] bg-[#0a0d37]/60 hover:border-cyan-500/60 hover:bg-[#0d1224] transition-all duration-200 group">
+                  <span className="text-3xl leading-none">{flag}</span>
+                  <div className="flex flex-col">
+                    <span className="text-white text-sm font-medium group-hover:text-cyan-400 transition-colors duration-200">{country}</span>
+                    <span className="text-gray-400 text-xs font-mono mt-0.5">{number}</span>
+                  </div>
+                  <div className="ml-auto">
+                    <FontAwesomeIcon icon={faPhone} className="text-cyan-500/50 group-hover:text-cyan-400 text-sm transition-colors duration-200" />
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {/* Cancel Button */}
+            <div className="px-5 pt-4 pb-5">
+              <button onClick={() => setShowCallModal(false)} className="w-full py-2.5 rounded-xl border border-[#1b2c68a0] bg-transparent text-gray-400 text-sm font-medium hover:border-pink-500/50 hover:text-pink-400 transition-all duration-200">
+                Cancel
+              </button>
+            </div>
+
+            {/* Bottom accent line */}
+            <div className="flex flex-row">
+              <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
+              <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
     </section>
-  )
+  );
 }

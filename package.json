@@ -29,6 +29,7 @@
     "react-smooth": "^4.0.1",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
+    "react-world-flags": "^1.6.0",
     "three": "^0.168.0",
     "tsparticles": "^3.9.1",
     "typewriter-effect": "^2.21.0"

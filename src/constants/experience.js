@@ -33,34 +33,37 @@ export const experiences = [
   },
 
   {
-    role: "Web Developer",
-    company: "Gan AFC Fried Chicken Restaurant",
-    website: "https://ganafcfriedchicken.web.app",
-    logo: "/company/ganafc.png",
-    location: "Muar, Johor, Malaysia",
-    type: "Full Time",
-    date: "May 2023 - Jun 2024",
+  role: "Web Developer",
+  company: "Gan AFC Fried Chicken Restaurant",
+  website: "https://ganafcfriedchicken.web.app",
+  logo: "/company/ganafc.png",
+  location: "Muar, Johor, Malaysia",
+  type: "Full Time",
+  date: "May 2023 - Jun 2024",
 
-    description:
-      "Worked on analytics dashboards and data pipelines for university data reporting.",
+  description:
+    "Developed and maintained the official website for Gan AFC Fried Chicken Restaurant, focusing on responsive UI/UX design, performance optimization, and clear presentation of menu and brand information to enhance customer engagement and online visibility.",
 
-    achievements: [
-      "Cleaned 800+ data records",
-      "Built Power BI dashboards for PMO & CPO",
-      "Improved internal reporting processes"
-    ],
+  achievements: [
+    "Designed and deployed the company’s official website using HTML, CSS, and JavaScript",
+    "Improved website responsiveness and cross-device compatibility for mobile and desktop users",
+    "Integrated Firebase hosting for fast, reliable deployment and scalability",
+    "Enhanced brand presence through structured layout and modern UI design",
+    "Optimized page load speed and overall performance for smoother user experience"
+  ],
 
-    tech: ["Python", "Power BI", "SQL"],
+  tech: ["HTML", "CSS", "JavaScript", "Firebase"],
 
-    projects: [
-      {
-        name: "University Data Dashboard",
-        description:
-          "Created Power BI dashboards to visualize university operational and student datasets.",
-        tech: ["Power BI", "Python", "SQL"]
-      }
-    ]
-  },
+  projects: [
+    {
+      name: "Company Official Website",
+      link: "https://ganafcfriedchicken.web.app",
+      description:
+        "Built a responsive business website to showcase menu items and company information, improving customer accessibility and digital presence.",
+      tech: ["HTML", "CSS", "JavaScript", "Firebase"]
+    }
+  ]
+},
 
   {
     role: "Data Analyst Engineer",
@@ -82,26 +85,30 @@ export const experiences = [
 
     tech: ["Python", "Power BI", "SQL", "DAX", "SSRS"],
   },
-    {
-    role: "UIUX Developer",
-    company: "TraitQuest Innovation Sdn Bhd",
-    website: "https://www.linkedin.com/company/traitquest/",
-    logo: "/company/traitquest.png",
-    location: "Kuala Lumpur, Malaysia ",
-    type: "Trainee",
-    date: "Oct 2022 - Dec 2022",
+  
+{
+  role: "UI/UX Developer",
+  company: "TraitQuest Innovation Sdn Bhd",
+  website: "https://www.linkedin.com/company/traitquest/",
+  logo: "/company/traitquest.png",
+  location: "Kuala Lumpur, Malaysia",
+  type: "Trainee",
+  date: "Oct 2022 - Dec 2022",
 
-    description:
-      "Analyze company financial performance, product sales and inventory trends to support management decisions.",
+  description:
+    "Designed and developed user-centric web and mobile interfaces, focusing on intuitive UX, visual consistency, and responsive design to enhance product usability and user engagement.",
 
-    achievements: [
-      "Built sales dashboards to monitor product performance.",
-      "Analyzed financial and inventory datasets.",
-      "Improved reporting efficiency for management decisions."
-    ],
+  achievements: [
+    "Designed 60+ UI screens and components using Figma, improving design consistency and user flow across the application",
+    "Created wireframes, prototypes, and user flows to translate business requirements into intuitive digital experiences",
+    "Collaborated with developers to implement responsive UI using HTML, CSS, and JavaScript",
+    "Enhanced user experience by applying UX principles such as visual hierarchy, accessibility, and usability heuristics",
+    "Improved design-to-development workflow efficiency through structured design systems and reusable components",
+    "Utilized Adobe Photoshop and Illustrator for asset creation and visual enhancement of UI elements"
+  ],
 
-    tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "HTML", "CSS", "JavaScript"],
-  }
+  tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "HTML", "CSS", "JavaScript"]
+}
 
   
 ];
