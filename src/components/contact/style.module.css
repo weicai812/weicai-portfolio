@@ -1,0 +1,360 @@
+/* ═══════════════════════════════════════════════
+   Contact — style.module.css
+   All styles live here. No Tailwind in JSX.
+   ═══════════════════════════════════════════════ */
+
+/* ── Page section ─────────────────────────────── */
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7rem 1rem 5rem;
+  min-height: 100vh;
+}
+
+/* ── Heading block ────────────────────────────── */
+.headingWrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #34d399; /* emerald-400 */
+  text-decoration: underline;
+  margin: 0 0 0.5rem;
+}
+
+.subheading {
+  color: #9ca3af; /* gray-400 */
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .subheading { font-size: 1.125rem; }
+}
+
+/* ── Two-column grid ──────────────────────────── */
+.grid {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ── Card (matches Hero code card) ───────────── */
+.card {
+  background: linear-gradient(to right, #0d1224, #0a0d37);
+  border: 1px solid rgba(27, 44, 104, 0.63);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* ── Pink/violet accent line ──────────────────── */
+.accentLine {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #ec4899 30%,        /* pink-500 */
+    #7c3aed 70%,        /* violet-600 */
+    transparent 100%
+  );
+}
+
+/* ── macOS-style dots header ──────────────────── */
+.cardDots {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.dotRed    { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #f87171; display: block; }
+.dotOrange { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #fb923c; display: block; }
+.dotGreen  { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #bbf7d0; display: block; }
+
+/* ── Card body (below border) ─────────────────── */
+.cardBody {
+  border-top: 2px solid #1e1b4b; /* indigo-900 */
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── Code syntax colours ──────────────────────── */
+.codeComment {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #6b7280; /* gray-500 */
+  margin: 0;
+}
+
+.codePink  { color: #ec4899; }
+.codeWhite { color: #ffffff; }
+.codeCyan  { color: #22d3ee; }
+.codeGray  { color: #9ca3af; }
+
+/* ── Contact link row ─────────────────────────── */
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(27, 44, 104, 0.63);
+  background: rgba(10, 13, 55, 0.6);
+  text-decoration: none;
+  color: white;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contactLink:hover {
+  border-color: rgba(6, 182, 212, 0.6);
+  background: #0d1224;
+}
+
+.contactLink:hover .arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #22d3ee;
+}
+
+.contactLink:hover .linkValue {
+  color: #22d3ee;
+}
+
+/* ── Icon box ─────────────────────────────────── */
+.iconBox {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(27, 44, 104, 0.4);
+  border-radius: 0.5rem;
+}
+
+.flag    { font-size: 1.25rem; line-height: 1; }
+.linkIcon { color: #22d3ee; font-size: 0.875rem; }
+
+/* ── Link label + value ───────────────────────── */
+.linkText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.linkLabel {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280; /* gray-500 */
+}
+
+.linkValue {
+  font-size: 0.875rem;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
+}
+
+/* ── Arrow ────────────────────────────────────── */
+.arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  color: rgba(6, 182, 212, 0.5);
+}
+
+/* ── Availability row ─────────────────────────── */
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2rem 1.5rem;
+}
+
+.availabilityText {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* ── Pulse dot ────────────────────────────────── */
+.pulseDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #34d399; /* emerald-400 */
+  flex-shrink: 0;
+  display: block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+}
+
+/* ── Form ─────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .row { grid-template-columns: 1fr 1fr; }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.label {
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Input / Textarea ─────────────────────────── */
+.input,
+.textarea {
+  background: rgba(10, 13, 55, 0.6);
+  border: 1px solid rgba(27, 44, 104, 0.63);
+  border-radius: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  font-family: ui-monospace, 'Courier New', monospace;
+  font-size: 0.8125rem;
+  color: #f3f4f6;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #4b5563;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(6, 182, 212, 0.6);
+  background: #0d1224;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.08);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ── Submit button ────────────────────────────── */
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.75rem;
+  background: linear-gradient(to right, #06b6d4, #0e7490);
+  border: none;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: linear-gradient(to right, #0891b2, #155e75);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.25);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .submitBtn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* ── Spinner ──────────────────────────────────── */
+.spinner {
+  display: inline-block;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Status messages ──────────────────────────── */
+.successMsg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #22d3ee;   /* cyan-400 */
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+.errorMsg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #f472b6;   /* pink-400 */
+  background: rgba(236, 72, 153, 0.1);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
