@@ -23,7 +23,7 @@ export default function ResumePage() {
     window.addEventListener('resize', checkMobile);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', '/resume.pdf', true);
+    xhr.open('GET', '/Resume.pdf', true);
     xhr.responseType = 'blob';
 
     xhr.onprogress = (event) => {
