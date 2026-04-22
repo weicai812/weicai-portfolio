@@ -34,7 +34,7 @@ export default function Navbar() {
           >
             About
             <div className="dropdown">
-              <Link href="/about#introduction" className="menu-item">Introduction</Link>
+              <Link href="/about#skills" className="menu-item">Skills</Link>
               <Link href="/about#experience" className="menu-item">Experience</Link>
               <Link href="/about#education" className="menu-item">Education</Link>
             </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
           About {isAboutOpen ? '▲' : '▼'}
         </button>
         <div className={`dropdown-mobile ${isAboutOpen ? 'open' : ''}`}>
-          <Link href="/about#introduction" className="menu-item">Introduction</Link>
+          <Link href="/about#skills" className="menu-item">Skills</Link>
           <Link href="/about#experience" className="menu-item">Experience</Link>
           <Link href="/about#education" className="menu-item">Education</Link>
         </div>
