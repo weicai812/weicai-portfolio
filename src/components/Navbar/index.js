@@ -39,7 +39,7 @@ export default function Navbar() {
               <Link href="/about#education" className="menu-item">Education</Link>
             </div>
           </div>
-          <Link href="/projects" className="nav-item">Projects</Link>
+          <Link href="/project" className="nav-item">Projects</Link>
           <Link href="/contact" className="nav-item">Contact</Link>
         </div>
 
@@ -69,7 +69,7 @@ export default function Navbar() {
           <Link href="/about#education" className="menu-item">Education</Link>
         </div>
 
-        <Link href="/projects" className="menu-item">Projects</Link>
+        <Link href="/project" className="menu-item">Projects</Link>
         <Link href="/contact" className="menu-item">Contact</Link>
       </div>
     </nav>

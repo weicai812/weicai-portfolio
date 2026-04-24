@@ -12,8 +12,6 @@ const Footer = () => {
           <a href="/disclaimer" className={styles.link}>Disclaimer</a>
           <span className={styles.separator}>|</span>
           <a href="/security-policy" className={styles.link}>Security Policy</a>
-          <span className={styles.separator}>|</span>
-          <a href="/sitemap" className={styles.link}>Sitemap</a>
         </div>
       </div>
     </footer>
