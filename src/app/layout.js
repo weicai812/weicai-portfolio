@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  metadataBase: new URL('https://weicai-portfolio.vercel.app'),
+  metadataBase: new URL('https://weicai.vercel.app'),
 
   title: {
     default: 'Gan Wei Cai | Software Developer & Data Analyst',
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
                 '@context': 'https://schema.org',
                 '@type': 'Person',
                 name: 'Gan Wei Cai',
-                url: 'https://weicai-portfolio.vercel.app',
+                url: 'https://weicai.vercel.app',
                 jobTitle: 'Software Developer & Data Analyst',
                 sameAs: [
                   'https://github.com/weicai812',
@@ -103,11 +103,11 @@ export default function RootLayout({ children }) {
                 '@context': 'https://schema.org',
                 '@type': 'WebSite',
                 name: 'Gan Wei Cai', // 🔥 THIS is the key fix
-                url: 'https://weicai-portfolio.vercel.app',
+                url: 'https://weicai.vercel.app',
                 potentialAction: {
                   '@type': 'SearchAction',
                   target:
-                    'https://weicai-portfolio.vercel.app/?q={search_term_string}',
+                    'https://weicai.vercel.app/?q={search_term_string}',
                   'query-input': 'required name=search_term_string',
                 },
               },
